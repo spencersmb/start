@@ -4,8 +4,23 @@
 
 // Import if Google Fonts URL is defined
 
+@if variable-exists(font-url--google){
+	@import url($font-url--google);
+}
 
 // Functions and Directives
-
+//$context: $base__font-size = basefont size is defualt if no context
+@function em($target, $context: $base__font-size){
+	@return ($target/$context) * 1em;
+}
 
 // Mixins
+
+@mixin bg-colors($map){
+	@each $theme, $color in $map {
+		&--#{$theme}{
+			background-color: $color;
+		}
+	}	
+}
+

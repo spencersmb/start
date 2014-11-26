@@ -4,11 +4,10 @@
 
 // Font Stacks
 
-$font-url--google: "http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900";
+$font-url--google: 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
 
-$primary-font: 'Lato','Helvetica Neue', Helvetica, arial, sans-serif;
-
-$secondary-font: 'Neue', Helvetica, arial, sans-serif;
+$font-family--primary    : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary  : 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 
 // Font Weights
@@ -25,11 +24,11 @@ $white     : #fff;
 $black     : #0b0b0b;
 $grey      : #797e83;
 
-$fountain-blue     : #52bab3;
-$emerald           : #5ece7f;
-$sunglo            : #e67478;
-$coral             : #ff784f;
-$purple            : #9279c3;
+$fountain-blue     : #52bab3;//standard
+$emerald           : #5ece7f;//success
+$sunglo            : #e67478;//erros
+$coral             : #ff784f;//warnings
+$purple            : #9279c3;//infos
 $scooter           : #39add1;
 
 // Color Usage
@@ -37,9 +36,19 @@ $scooter           : #39add1;
 $primary-color     : $fountain-blue;
 $secondary-color   : $scooter;
 $accent-color      : $emerald;
-$shadow-color      : $rgba($black, .2);
+$shadow-color      : rgba($black, .2);
+
+//color map
+
+$ui-colors:(
+	default: $fountain-blue,
+	success: $emerald,
+	error: $sunglo,
+	warning: $coral,
+	info: $purple,
+	);
 
 // Text
 
-$base__font-szie: 16px;
+$base__font-size: 16px;
 $base__line: 24px;
