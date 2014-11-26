@@ -14,8 +14,15 @@
 	@return ($target/$context) * 1em;
 }
 
-// Mixins
+//call color palette modifiers
+//map-get(map-get($palettes, grey), x-dark);
+@function palette($palette, $shade: 'base'){
+	@return map-get(map-get($palettes, $palette), $shade);
+}
 
+// Mixins
+//include loop to add whatever class with the key/value pair in the config ui-colors
+//$theme is a variable we created here to use in the loop as well as $map
 @mixin bg-colors($map){
 	@each $theme, $color in $map {
 		&--#{$theme}{
@@ -24,3 +31,29 @@
 	}	
 }
 
+@mixin img-replace($img, $w, $h, $disp: block) {
+	background-image: url('#{$path--rel}/#{$img}');
+	background-repeat: no-repeat;
+	width:$w;
+	height:$h;
+	display:$disp;
+}
+
+//use null as an optional placeholder - write css if a value is placed in that variable.
+@mixin p-el(
+    $el,
+    $el-w: null,
+    $el-h: null) {
+    
+    @if $el == "before" or $el == "after" {
+      &:#{$el} {
+        @extend %pseudos;
+        width: $el-w;
+        height: $el-h;
+        @content;
+      }
+     }
+     @else {
+      @error "`#{$el}` is not a valid pseudo-element.";
+     }     
+}
