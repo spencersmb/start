@@ -18,6 +18,8 @@ $font-weight--medium: 400;
 $font-weight--bold: 700;
 $font-weight--ultra-bold: 900;
 
+$letter-space: 1px;
+
 // Descriptive Base Colors
 
 $white     : #fff;
@@ -71,6 +73,15 @@ $ui-colors:(
 
 $base__font-size: 16px;
 $base__line: 24px;
+
+// Border radius
+
+$br--default     : .4em;
+$br--round       : 50%;
+
+// Transitions
+
+$trns-duration   : .3s;
 
 //Set path for image asset
 $path--rel     : "../img";

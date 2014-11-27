@@ -40,6 +40,8 @@
 }
 
 //use null as an optional placeholder - write css if a value is placed in that variable.
+//for use with Hamburger icon
+//example if statment + error
 @mixin p-el(
     $el,
     $el-w: null,
@@ -56,4 +58,19 @@
      @else {
       @error "`#{$el}` is not a valid pseudo-element.";
      }     
+}
+
+// Bem selectors
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+//modifier 
+@mixin m($modifier) {
+  &.#{$modifier} {
+    @content;
+  }
 }

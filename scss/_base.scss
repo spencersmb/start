@@ -19,20 +19,13 @@ header {
 }
 
 h1 {
-  font-weight: $font-weight--light;
-  font-size: em(42px);
-  //desired line height divided by font size in px
-  line-height: (46px / 42px);
-  //desired margine in px / font size of h1
-  margin-bottom: em(70px, 42px);
-  //using map get function twice to get nested value
-  //map-get(map-get($palettes, grey), x-dark);
-  color: palette(grey, x-dark);
+   @extend %hdln-prim;
 }
 
 h2 {
-  font-family: $font-family--secondary;
-  font-weight: $font-weight--thin;
-  font-size: em(24px);
-  color: palette(grey, light);
+  @extend %hdln-sec;
+}
+
+h4{
+
 }

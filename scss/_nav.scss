@@ -2,31 +2,66 @@
 // Nav Styles
 // ==========================================================================
 
+
 .nav {
   margin-top: em(20px);
   margin-bottom:em(30px);
   text-decoration: none;
 
-  &__item {
-    display:inline-block;
-    margin:0 em(12px);
+//mixin used to add BEM selector to parent selector
+//using modular extend properties to add content.
+  @include e(item) {
+    @extend %nav-item-disp;
     a {
-      font-size: em(18px);
-      font-weight: $font-weight--light;
+      @extend %nav-item-link;
       color: palette(grey);
-      display: block;
-      padding: em(8px, 18px);
-      border-bottom: 1px solid transparent;
-    }
-    // &.active a{
-    // color:palette(black);
-    // border-color: $primary-color;
+      &:hover{
+        @extend %nav-item-on;
+      }
+    } //end a link
 
-  }
+    @include m(active) {
+       @extend %nav-item-disp;
+      a{
+        @extend %nav-item-link;
+        @extend %nav-item-on;
+      }
+    }//end active
 
-}
+  } // end item
 
-.active a{
-    color:palette(black);
-    border-color: $primary-color;
-  }
+} // end nav
+
+// .active a{
+//     color:palette(black);
+//     border-color: $primary-color;
+//   }
+
+
+
+
+// .nav {
+//   margin-top: em(20px);
+//   margin-bottom:em(30px);
+//   text-decoration: none;
+
+//   &__item {
+//     display:inline-block;
+//     margin:0 em(12px);
+//     a {
+//       font-size: em(18px);
+//       font-weight: $font-weight--light;
+//       color: palette(grey);
+//       display: block;
+//       padding: em(8px, 18px);
+//       border-bottom: 1px solid transparent;
+//     } //end a link
+
+//   } // end item
+
+// } // end nav
+
+// .active a{
+//     color:palette(black);
+//     border-color: $primary-color;
+//   }
