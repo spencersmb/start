@@ -1,24 +1,6 @@
 // ==========================================================================
-// Utilities
+// Mixins
 // ==========================================================================
-
-// Import if Google Fonts URL is defined
-
-@if variable-exists(font-url--google){
-	@import url($font-url--google);
-}
-
-// Functions and Directives
-//$context: $base__font-size = basefont size is defualt if no context
-@function em($target, $context: $base__font-size){
-	@return ($target/$context) * 1em;
-}
-
-//call color palette modifiers
-//map-get(map-get($palettes, grey), x-dark);
-@function palette($palette, $shade: 'base'){
-	@return map-get(map-get($palettes, $palette), $shade);
-}
 
 // Mixins
 //include loop to add whatever class with the key/value pair in the config ui-colors

@@ -43,7 +43,8 @@
 //headlines
 
 %hdln-prim{
-  font-weight: $font-weight--light;
+  font-family: $font-family--primary;
+  font-weight: $font-weight--medium;
   font-size: em(42px);
   //desired line height divided by font size in px
   line-height: (46px / 42px);

@@ -1,0 +1,17 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+[class^="btn--"] {
+  @extend %btn;
+  margin-bottom: em(20px, 14px); 
+  width: auto;
+  display: inline-block;
+  margin-right: em(15px, 14px);
+}
+
+.btn,
+.progbar,
+.tooltips{
+	@include bg-colors($ui-colors);
+}
