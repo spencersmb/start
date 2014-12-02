@@ -56,3 +56,16 @@ p{
  	padding: 0 0 0 5%;
  	border-left: solid em(8px,24px) palette(grey, xx-light);
  }
+// img
+img {
+	margin-bottom: em(24px);
+	max-width: 100%;
+	height:auto;
+}
+ //lists
+ ul,
+ li {
+ 	margin:0;
+ 	padding:0;
+ 	list-style-type: none;
+ }

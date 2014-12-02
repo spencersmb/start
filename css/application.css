@@ -289,6 +289,19 @@ blockquote {
   border-left: solid 0.33333em #ebecec;
 }
 
+img {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .panel, .panel.centered {
   padding-top: 1.875em;
   padding-bottom: 1.25em;
@@ -303,6 +316,54 @@ blockquote {
   max-width: 61.875em;
   margin: 0 auto;
   padding: 0 0.9375em 0 0.9375em;
+}
+
+.grid__col--1 {
+  width: 6.5%;
+}
+
+.grid__col--2 {
+  width: 15%;
+}
+
+.grid__col--3 {
+  width: 23.5%;
+}
+
+.grid__col--4 {
+  width: 32%;
+}
+
+.grid__col--5 {
+  width: 40.5%;
+}
+
+.grid__col--6 {
+  width: 49%;
+}
+
+.grid__col--7 {
+  width: 57.5%;
+}
+
+.grid__col--8 {
+  width: 66%;
+}
+
+.grid__col--9 {
+  width: 74.5%;
+}
+
+.grid__col--10 {
+  width: 83%;
+}
+
+.grid__col--11 {
+  width: 91.5%;
+}
+
+.grid__col--12 {
+  width: 100%;
 }
 
 .form__btn, [class^="btn--"] {
@@ -357,6 +418,18 @@ h2, .headline-secondary.grouped, .headline-secondary {
   font-size: 1.5em;
   color: #999da1;
   letter-spacing: 1px;
+}
+
+.img.wrap {
+  border: 1px solid #d6d7d9;
+  padding: 0.75em;
+}
+.img.avatar {
+  display: block;
+  border-radius: 50%;
+}
+.img.hero {
+  margin-bottom: 2.625em;
 }
 
 .headline-primary {
