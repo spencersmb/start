@@ -4,9 +4,13 @@
 
 
 .nav {
-  margin-top: em(20px);
-  margin-bottom:em(30px);
-  text-decoration: none;
+
+    margin-top: em(20px);
+    margin-bottom:em(30px);
+    text-decoration: none;
+
+
+
 
 //mixin used to add BEM selector to parent selector
 //using modular extend properties to add content.

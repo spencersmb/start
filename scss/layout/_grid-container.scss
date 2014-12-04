@@ -1,0 +1,20 @@
+// ==========================================================================
+// Grid container
+// ==========================================================================
+
+.grid{
+	@extend %clearfix;
+	@extend .centered;
+	width:90%;
+
+	//make nested grid 100%
+	//reverse netsting order here with > &
+	[class*="grid__"] > & {
+		width:100%;
+	}
+
+	//set max width for grid container
+	@include mq(large){
+		width:1050px;
+	}
+}

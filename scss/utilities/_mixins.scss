@@ -43,7 +43,7 @@
 }
 
 // Bem selectors
-
+// this adds __ to our specified class using the smacss guidelines
 @mixin e($element) {
   &__#{$element} {
     @content;
@@ -56,3 +56,52 @@
     @content;
   }
 }
+
+//Select all siblings but the first one inside a group of elements
+//adds margin left to all but the first element
+@mixin doubly($margin: 1em){
+  & + & {
+    margin-left:$margin;
+    @content;
+  }
+}
+
+//media quries
+@mixin mq($screen-size) {
+  @if $screen-size == "small" {
+    @media (min-width: $small) and (max-width: $medium) {
+      @content;
+    }
+  }
+  @else if $screen-size == "medium" {
+    @media (min-width: $medium + 1) {
+      @content;
+    }
+  }
+  @else if $screen-size == "large" {
+    @media (min-width: $large){ 
+      @content;
+    }
+  }
+  @else {
+    @error "Wrong break-point value for '#{$screen-size}'";
+  }
+}
+
+
+//grid columns
+@mixin g-columns {
+  @for $i from 1 through $g-col-count {
+
+  $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
+  $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+
+  &--#{$i} {
+   width: percentage($target / $context);
+  }
+
+}
+}
+
+
+

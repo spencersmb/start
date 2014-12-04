@@ -21,7 +21,9 @@
 }
 
 //Set context for fuid width
-@function g-context($g-col-width, $g-col-count, $g-gutter-width) {
-   $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
-   @return $g-context;
+@function g-context($g-col-width, $g-col-count, $g-gutter-width){
+	//total width * the total number of col then add the total gutter width 
+	//gutter is usually one less than the col count
+	$g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
+	@return $g-context;
 }
