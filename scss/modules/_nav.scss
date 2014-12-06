@@ -9,9 +9,6 @@
     margin-bottom:em(30px);
     text-decoration: none;
 
-
-
-
 //mixin used to add BEM selector to parent selector
 //using modular extend properties to add content.
   @include e(item) {
@@ -35,37 +32,3 @@
   } // end item
 
 } // end nav
-
-// .active a{
-//     color:palette(black);
-//     border-color: $primary-color;
-//   }
-
-
-
-
-// .nav {
-//   margin-top: em(20px);
-//   margin-bottom:em(30px);
-//   text-decoration: none;
-
-//   &__item {
-//     display:inline-block;
-//     margin:0 em(12px);
-//     a {
-//       font-size: em(18px);
-//       font-weight: $font-weight--light;
-//       color: palette(grey);
-//       display: block;
-//       padding: em(8px, 18px);
-//       border-bottom: 1px solid transparent;
-//     } //end a link
-
-//   } // end item
-
-// } // end nav
-
-// .active a{
-//     color:palette(black);
-//     border-color: $primary-color;
-//   }
