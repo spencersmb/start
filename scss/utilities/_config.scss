@@ -41,6 +41,7 @@ $accent-color      : $emerald;
 $shadow-color      : rgba($black, .2);
 
 //color palette modifiers
+//dual Nested array
 $palettes: (
 
 	grey: (
@@ -60,7 +61,7 @@ $palettes: (
 	);
 
 //color map
-
+//single nested array
 $ui-colors:(
 	default: $fountain-blue,
 	success: $emerald,

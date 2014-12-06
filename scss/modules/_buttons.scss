@@ -2,6 +2,8 @@
 // Buttons
 // ==========================================================================
 
+
+//selects classes that start with
 [class^="btn--"] {
   @extend %btn;
   margin-bottom: em(20px, 14px); 
@@ -15,3 +17,10 @@
 .tooltips{
 	@include bg-colors($ui-colors);
 }
+
+//Example output
+// .btn--default,
+// .progbar--default,
+// .tooltips--default {
+//   background-color: #52bab3;
+// }

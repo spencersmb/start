@@ -16,11 +16,12 @@
 
 //call color palette modifiers
 //map-get(map-get($palettes, grey), x-dark);
+//https://www.codefellows.org/blog/so-you-want-to-play-with-list-maps
 @function palette($palette, $shade: 'base'){
 	@return map-get(map-get($palettes, $palette), $shade);
 }
 
-//Set context for fuid width
+//Set context for fluid width
 @function g-context($g-col-width, $g-col-count, $g-gutter-width){
 	//total width * the total number of col then add the total gutter width 
 	//gutter is usually one less than the col count

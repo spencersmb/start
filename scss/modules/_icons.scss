@@ -7,17 +7,29 @@
   @include img-replace("logo.svg", 115px, 45px, inline-block);
 }
 
-.icn-toggle {
+.icn {
 
-  width: 25px;
-  height: 17px;
-  position: absolute;
-  border-top: solid 3px palette(grey);
-  border-bottom: solid 3px palette(grey);
-  
-  @include p-el(before, 25px, 3px){
-  background: palette(grey, light);
-  top:4px;
+  //nav 
+  @include m(nav-toggle){
+    width: 25px;
+    height: 17px;
+    position: absolute;
+    border-top: solid 3px palette(grey);
+    border-bottom: solid 3px palette(grey);
+    
+    @include p-el(before, 25px, 3px){
+    background: palette(grey, light);
+    top:4px;
+    }
   }
-  display:none;
+  
+
 }
+//Example output
+// p-el
+// .icn.nav-toggle:before {
+//   width: 25px;
+//   height: 3px;
+//   background: #999da1;
+//   top: 4px;
+// }

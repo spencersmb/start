@@ -15,11 +15,12 @@
       </a>
       
       <nav role="navigation" class="navbar">
-        <span class="icn-toggle">
+      <!-- use id toggle for js hook -->
+        <span id="toggle" class="icn nav-toggle is-display-mobile">
           <b class="srt">Toggle</b>
         </span>   
 
-        <ul class="nav">
+        <ul class="nav is-collapsed-mobile">
           <li class="nav__item"><a href="#">Typography</a></li>
           <li class="nav__item"><a href="#">Buttons</a></li>
           <li class="nav__item"><a href="#">Forms</a></li>
@@ -30,7 +31,7 @@
       </nav>    
     </header>
     </div>
-    <div class="grid">
+    <div class="grid is-hidden-mobile">
       <div class="grid__col--12">
         <img class="img hero" src="img/hero.jpg">
       </div>
@@ -104,6 +105,12 @@
         </a>
         <p>A simple UI Kit for everyone to share and enjoy.</p>
       </footer>
-    </div>     
+    </div>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>
+    $('#toggle').on('click', function(){
+      $(this).next('ul').toggleClass('is-collapsed-mobile');
+    });
+    </script>     
   </body>
 </html>

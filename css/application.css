@@ -16,7 +16,7 @@
   width: 1px;
 }
 
-.icn-toggle:before {
+.icn.nav-toggle:before {
   display: block;
   content: '';
   position: absolute;
@@ -586,15 +586,14 @@ h2, .headline-secondary.grouped, .headline-secondary {
   display: inline-block;
 }
 
-.icn-toggle {
+.icn.nav-toggle {
   width: 25px;
   height: 17px;
   position: absolute;
   border-top: solid 3px #797e83;
   border-bottom: solid 3px #797e83;
-  display: none;
 }
-.icn-toggle:before {
+.icn.nav-toggle:before {
   width: 25px;
   height: 3px;
   background: #999da1;

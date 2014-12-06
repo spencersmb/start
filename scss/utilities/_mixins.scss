@@ -5,6 +5,7 @@
 // Mixins
 //include loop to add whatever class with the key/value pair in the config ui-colors
 //$theme is a variable we created here to use in the loop as well as $map
+//buttons.scss
 @mixin bg-colors($map){
 	@each $theme, $color in $map {
 		&--#{$theme}{
@@ -12,7 +13,7 @@
 		}
 	}	
 }
-
+//icon.scss
 @mixin img-replace($img, $w, $h, $disp: block) {
 	background-image: url('#{$path--rel}/#{$img}');
 	background-repeat: no-repeat;
@@ -24,6 +25,7 @@
 //use null as an optional placeholder - write css if a value is placed in that variable.
 //for use with Hamburger icon
 //example if statment + error
+//icon.scss
 @mixin p-el(
     $el,
     $el-w: null,
@@ -50,7 +52,8 @@
   }
 }
 
-//modifier 
+//modifier
+//add-- when you make a new file 
 @mixin m($modifier) {
   &.#{$modifier} {
     @content;
@@ -59,6 +62,7 @@
 
 //Select all siblings but the first one inside a group of elements
 //adds margin left to all but the first element
+//grid-column.scss example
 @mixin doubly($margin: 1em){
   & + & {
     margin-left:$margin;

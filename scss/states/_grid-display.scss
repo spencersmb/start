@@ -7,7 +7,7 @@
 	@include mq(small){
 		display: block;
 
-
+	//allows to nest the rule to not 
 		@at-root (with: media){
 			.is-hidden-mobile {
 				display: none;
